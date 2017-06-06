@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-7m-dtn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F3f-fh-CX8">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY4-7C-Anf">
+                                                <rect key="frame" x="170" y="0.0" width="35.5" height="333.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKt-nv-Riv">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="400" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-5Q-zrw" userLabel="Answer Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Umd-5Q-zrw" firstAttribute="width" secondItem="VKt-nv-Riv" secondAttribute="width" id="LXe-v5-2M4"/>
+                                            <constraint firstItem="Umd-5Q-zrw" firstAttribute="leading" secondItem="VKt-nv-Riv" secondAttribute="leading" id="P8J-Ui-YQS"/>
+                                            <constraint firstAttribute="trailing" secondItem="Umd-5Q-zrw" secondAttribute="trailing" id="bNk-Gf-kyC"/>
+                                            <constraint firstAttribute="bottom" secondItem="Umd-5Q-zrw" secondAttribute="bottom" id="iz8-ZI-dE9"/>
+                                            <constraint firstItem="Umd-5Q-zrw" firstAttribute="top" secondItem="VKt-nv-Riv" secondAttribute="top" id="ntB-u7-gSj"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sGn-7m-dtn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0FN-WX-U03"/>
+                            <constraint firstAttribute="trailing" secondItem="sGn-7m-dtn" secondAttribute="trailing" id="QIs-5a-9cG"/>
+                            <constraint firstAttribute="bottom" secondItem="sGn-7m-dtn" secondAttribute="bottom" id="c8R-qf-Ba6"/>
+                            <constraint firstItem="sGn-7m-dtn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rXZ-iH-i89"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerStackView" destination="Umd-5Q-zrw" id="RKP-AA-rEN"/>
+                        <outlet property="questionLabel" destination="GY4-7C-Anf" id="rUu-Qr-tl5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
