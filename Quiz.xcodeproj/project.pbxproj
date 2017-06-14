@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46DF74B11EE756160097639D /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DF74B01EE756160097639D /* AnswerButton.swift */; };
 		83DC9D2F1DB6AD3A0006EC9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC9D2E1DB6AD3A0006EC9C /* AppDelegate.swift */; };
 		83DC9D311DB6AD3A0006EC9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC9D301DB6AD3A0006EC9C /* ViewController.swift */; };
 		83DC9D341DB6AD3A0006EC9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DC9D321DB6AD3A0006EC9C /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46DF74B01EE756160097639D /* AnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		83DC9D2B1DB6AD3A0006EC9C /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DC9D2E1DB6AD3A0006EC9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DC9D301DB6AD3A0006EC9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				83DC9D301DB6AD3A0006EC9C /* ViewController.swift */,
 				83DC9D401DB6AD960006EC9C /* QuizModel.swift */,
 				83DC9D421DB6ADB40006EC9C /* Question.swift */,
+				46DF74B01EE756160097639D /* AnswerButton.swift */,
 				83DC9D441DB6C2B60006EC9C /* QuestionData.json */,
 				83DC9D321DB6AD3A0006EC9C /* Main.storyboard */,
 				83DC9D351DB6AD3A0006EC9C /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46DF74B11EE756160097639D /* AnswerButton.swift in Sources */,
 				83DC9D311DB6AD3A0006EC9C /* ViewController.swift in Sources */,
 				83DC9D431DB6ADB40006EC9C /* Question.swift in Sources */,
 				83DC9D411DB6AD960006EC9C /* QuizModel.swift in Sources */,

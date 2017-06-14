@@ -54,7 +54,9 @@ class QuizModel: NSObject {
             let myQ = Question()
             
             // update the question object form the dictionary
+            
             myQ.questionText = jsonQuestion["question"] as! String
+            
             myQ.answers = jsonQuestion["answers"] as! [String]
             myQ.correctAnswerIndex = jsonQuestion["correctIndex"] as! Int
             myQ.module = jsonQuestion["module"] as! Int
