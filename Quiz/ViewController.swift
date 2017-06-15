@@ -150,7 +150,11 @@ class ViewController: UIViewController {
         view.layoutIfNeeded()
         
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            
+            // outer
             self.dimView.alpha = 1
+            
+            // inner
             self.resultViewBottom.constant = 30
             self.resultViewTop.constant = 30
             self.view.layoutIfNeeded()
@@ -226,20 +230,39 @@ class ViewController: UIViewController {
     // - MARK: Save and restore computer state functions
     
     func saveState() -> Void {
+
         // Gets the question number of what is on the screen now
         guard let currentQuestion = currentQuestion, let tempQuestionNbr = questions.index(of: currentQuestion) else { return }
-        
         // saves it
         UserDefaults.standard.set(tempQuestionNbr, forKey: "questionNbr")
+        
+        // correct answers
+        UserDefaults.standard.set(correctCount, forKey: "correctCount")
+        
+        
+        
+        // Synchronize
+        UserDefaults.standard.synchronize()
+        
     }
     
     func restoreState() -> Void {
         guard let savedquestionNbr = UserDefaults.standard.object(forKey: "questionNbr") as? Int else {return}
         questionNbr = savedquestionNbr
+        
+        // correct answers
+        guard let savedCorrectCount = UserDefaults.standard.object(forKey: "correctCount") as? Int else { return }
+        correctCount = savedCorrectCount
+        
+
     }
     
     func deleteState() -> Void {
         UserDefaults.standard.removeObject(forKey: "questionNbr")
+        UserDefaults.standard.removeObject(forKey: "correctCount")
+       // Synchronize
+        UserDefaults.standard.synchronize()
+
     }
     
 }
